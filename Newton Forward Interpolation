@@ -8,7 +8,7 @@ ans:-
 		                       2!             3!                             n!
                          
 */  
-
+ 
 #include<stdio.h>
 int fact(int n){
 	int f=1,i;
@@ -22,9 +22,9 @@ int main(){
 	scanf("%d",&n);
 	
 	for(i=0;i<n;i++){
-		printf("Enter the values of X: ");
+		printf("Enter the values of X[%d]: ",i);
 		scanf("%f",&x[i]);
-		printf("Enter the values of f(x)=y: ");
+		printf("Enter the values of f(x[%d])=y: ",i);
 		scanf("%f",&y[i][0]);
 	}
 	

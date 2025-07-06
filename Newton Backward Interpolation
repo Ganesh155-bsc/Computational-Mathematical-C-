@@ -2,7 +2,7 @@ Q) Implementation Newton Backward Interpolation Using C programming.
 ans: 
 /*	Newton Backward Interpolation Formula: -
  
-				   		            u(u-1)  	   u(u+1)(u+2)               u(u+1)(u+2)(u+ n-1) 
+				     u(u-1)  	   u(u+1)(u+2)               u(u+1)(u+2)(u+ n-1) 
 		   f(x)= Y0 + u*Y1 + ------ * Y2 + ----------- * Y3 +......+ ------------------- * Yn
 		                       2!             3!                             n!
                          

@@ -1,0 +1,43 @@
+Q) Implementation Lagrange Interpolation using C programming.
+ans:-
+
+/*   Lagrange Interpolation Formula:- 
+
+			       (x-x1)(x-x2)(x-x3)            (x-x0)(x-x2)(x-x3)            (x-x0)(x-x1)(x-x3)             (x-x0)(x-x1)(x-x2)
+	  f(x)= -----------------------* Y0 + ------------------------* Y1 + -----------------------* Y2 + -----------------------* Y3  
+		       (x0-x1)(x0-x2)(x0-x3)         (x1-x0)(x1-x2)(x1-x3)          (x2-x0)(x2-x1)(x2-x3)          (x3-x0)(x3-x1)(x3-x2)
+
+*/
+
+#include<stdio.h>
+int main(){
+	float x[10],y[10],value,term,result=0.0;
+	int n,i,j;
+	printf("Enter the number of data points: ");
+	scanf("%d",&n);
+	
+	for(i=0;i<n;i++){
+		printf("Enter the values of X[%d]: ",i);
+		scanf("%f",&x[i]);
+		printf("Enter the values of Y[%d]: ",i);
+		scanf("%f",&y[i]);
+	}
+	
+	printf("Enter the value of X to interpolate: ");
+	scanf("%f",&value);
+	
+	//Apply Lagrange Interpoaltion
+	for(i=0;i<n;i++){
+		term=y[i];
+		for(j=0;j<n;j++){
+			if(j!=i)
+				term=term*(value-x[j])/(x[i]-x[j]);
+		}
+		result=result+term;
+	}
+		
+	printf("\nInterpoalted value at X= %.2f is %.4f",value,result);
+	return 0;
+}
+
+

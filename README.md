@@ -1,3 +1,16 @@
+Algorithm (Newton Backward Interpolation):
+
+
+
+Algorithm (Newton Forward Interpolation):
+
+
+
+
+Algorithm (Bisection Method):
+
+
+
 
 Algorithm (Lagrange Interpolation):
 

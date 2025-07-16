@@ -70,3 +70,16 @@ Algorithm (Lagrange Interpolation):
                 - result = result + term
             Step 5: Output result
             Step 6: Stop
+
+Algorithm (Trapezoidal Rule):
+
+            Step 1: Start  
+            Step 2: Input lower limit a, upper limit b, and number of intervals n  
+            Step 3: Calculate step size h = (b - a) / n  
+            Step 4: Initialize sum = f(a) + f(b)  
+            Step 5: For i = 1 to n-1  
+                    - Calculate x = a + i * h  
+                    - sum = sum + 2 * f(x)  
+            Step 6: Compute result = (h / 2) * sum  
+            Step 7: Output result  
+            Step 8: Stop

@@ -1,0 +1,35 @@
+Q) 
+ans:-
+
+include <stdio.h>
+
+// Define the function to integrate
+#define f(x) (1 / (1 + (x)*(x)))   // Example: f(x) = 1 / (1 + x^2)
+
+int main() {
+    float a, b, h, sum = 0.0;
+    int n, i;
+
+    // Input the limits and number of subintervals
+    printf("Enter the lower limit (a): ");
+    scanf("%f", &a);
+    printf("Enter the upper limit (b): ");
+    scanf("%f", &b);
+    printf("Enter the number of intervals (n): ");
+    scanf("%d", &n);
+
+    // Calculate step size
+    h = (b - a) / n;
+
+    // Apply Trapezoidal Rule
+    sum = f(a) + f(b);  // First and last terms
+
+    for(i = 1; i < n; i++) {
+        float x = a + i * h;
+        sum =sum + 2 * f(x);
+    }
+    sum = (h / 2) * sum;
+    printf("Approximate value of the integral = %.6f\n", sum);
+
+    return 0;
+}
